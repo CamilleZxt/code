@@ -1,0 +1,54 @@
+<!--pages/positionDetail/positionDetail.wxml-->
+<view class="position-detail">
+  <view class="pos-title">
+    <view class="title text-ellipsis">{{name}}</view>
+  </view>
+
+
+  <!-- 职位详情-start -->
+  <view class="detail">
+    <view class="items">
+      <!-- 兼职日薪 --> 
+      <view class="item text-ellipsis">
+        <image class="icon" src="/images/money.png" />
+        <text class="text">{{salary}}/天</text>
+      </view>
+      <!-- 兼职城市 -->
+      <view class="item text-ellipsis  three-n-1" bindtouchend='openMap' >
+        <image class="icon" src="/images/location.png" />
+        <text class="text">{{city}}</text>
+      </view>
+      <!-- 兼职时间 -->
+      <view class="item text-ellipsis three-n">
+        <image class="icon" src="/images/time.png" />
+        <text class="text">{{date}}</text>
+      </view>
+      <!-- 联系电话 -->
+      <view class="item text-ellipsis" bindtouchend="calling">
+        <image class="icon" src="/images/tel.png" />
+        <text class="text">{{hr_tel}}</text>
+      </view>
+      <!-- 公司名 -->
+      <view class="item text-ellipsis" >
+        <image class="icon" src="/images/icon_v.png" />
+        <text class="text">{{company}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 职位详情-end -->
+  <!-- 职位描述-start --> 
+  <view class="position-desc">
+    <view class="header">工作描述</view>
+    <view class="content">
+       <!-- <view wx:if='{{positionDesc}}' wx:for='{{positionDesc}}'>{{item}}</view>  -->
+      <view class="text">兼职类型：{{job_type}}</view> 
+      <view class="text">所需人数：{{job_num}}人</view> 
+      <view class="text">兼职详情：{{detail}}</view> 
+    </view>
+  </view>
+  <!-- 职位描述-end -->
+
+  <view class="fix-btn">
+    <view class="deliver-resume" bindtap='applyForJob'>投递简历</view>
+  </view>
+</view>

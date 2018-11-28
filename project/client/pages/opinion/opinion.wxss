@@ -1,0 +1,60 @@
+/* pages/opinion/opinion.wxss */
+page{
+  height:100%;
+  background:#EFEFF4;
+}
+
+.op-box{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  color: #fff; 
+  background-color:#84C7FF; 
+  text-align: left;
+  /* align-items: center; */
+  padding-left: 20rpx; 
+  flex: 1;
+}
+
+.item-cell{
+  width: 100%;
+   /* padding: 30rpx 28rpx 30rpx 28rpx;  */
+  display: flex;
+  background-color:#84C7FF;
+  color: #fff;
+  margin: 20rpx 20rpx 10rpx 10rpx;
+  border-radius: 40rpx;
+}
+
+.item-cell-bd{
+  flex: 1;
+  padding-left: 10rpx;
+}
+
+.item-cell-ft{
+  position: relative;
+  text-align: right;
+}
+
+.op-text{
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin: 20rpx atuo 0;
+  border-radius: 20rpx;
+}
+.op-text .op-con{
+  width: 100%;
+  height: 270rpx;
+  display: flex;
+  font-size:32rpx;
+  color: #84C7FF;
+}
+.btn{
+  width: 30%;
+  background: #84C7FF;
+  margin: 60rpx auto;
+  color: #fff;
+}

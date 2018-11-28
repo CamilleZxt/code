@@ -1,0 +1,53 @@
+{
+  "pages": [
+     
+    "pages/firstPage/firstPage", 
+    "pages/create-job/create-job",
+    "pages/my/my",
+    "pages/switchcity/switchcity",
+    "pages/edit-resume-base/edit-resume-base",
+    "pages/my-resume/my-resume",
+    "pages/messages/messages",
+    "pages/opinion/opinion",
+    "pages/positionDetail/positionDetail",
+    "pages/myAddJob/myAddJob",
+    "pages/jobAccept/jobAccept",
+    "pages/hisResume/hisResume",
+    "pages/delete-resume/delete-resume"
+    
+  ],
+  "window": {
+    "backgroundColor": "#84C7FF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#84C7FF",
+    "navigationBarTitleText": "校园兼职圈",
+    "navigationBarTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#D8D8D3",
+    "selectedColor": "#84C7FF",
+    "backgraoundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/firstPage/firstPage",
+        "text": "首页",
+        "iconPath":"/images/tab1_icon.png",
+        "selectedIconPath":"/images/tab1_active.png"
+      },
+      {
+        "pagePath": "pages/create-job/create-job",
+        "text": "我要发布",
+        "iconPath": "/images/create.png",
+        "selectedIconPath": "/images/create_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tab2_icon.png",
+        "selectedIconPath": "/images/tab2_active.png"
+      }
+    ]
+  }
+} 

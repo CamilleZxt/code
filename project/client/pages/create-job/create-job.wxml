@@ -1,0 +1,115 @@
+<!--pages/create-job/create-job.wxml-->
+<view class="item-cells no-top">
+
+  <view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>兼职名称</text> 
+    </view>
+    <view class="item-cell-ft blue">
+      <input bindfocus="namefocus" bindblur="nameblur" placeholder-style="color:#999;font-weight:bold;" type="text" maxlength="20" value="{{jobName}}" placeholder="{{job_name}}" />
+    </view>
+  </view> 
+
+  <view class="item-cell item-cell-access">
+    <view class="item-cell-bd">
+      <text>兼职类型</text>
+    </view> 
+    <picker class="item-cell-ft blue" bindchange="bindPickerChangeType" value="{{typeindex}}" range="{{typelist}}">
+      <view class="picker">
+        {{typelist[typeindex]}}
+      </view>
+    </picker>
+  </view>
+
+<view class="item-cell item-cell-access">
+    <view class="item-cell-bd">
+      <text>兼职周期</text>
+    </view>
+   <picker class="item-cell-ft blue" bindchange="bindPickerChangeTime" value="{{timeindex}}" range="{{timelist}}">
+      <view class="picker">
+        {{timelist[timeindex]}}
+      </view>
+    </picker>
+  </view> 
+
+  <view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>所属公司</text>
+    </view>
+    <view class="item-cell-ft blue">
+      <input bindfocus="comfocus" bindblur="comblur" placeholder-style="color:#999;font-weight:bold;" type="text" maxlength="20" value="{{comName}}" placeholder="{{com}}" />
+    </view>
+  </view>
+
+
+  <view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>工作城市</text>
+    </view>
+    <view class="item-cell-ft blue">
+      <input bindfocus="cityfocus" bindblur="cityblur" placeholder-style="color:#999;font-weight:bold;" type="text" maxlength="10" value="{{cityName}}" placeholder="{{city}}" />
+    </view>
+  </view>
+
+   <view class="item-cell item-cell-access">
+    <view class="item-cell-bd">
+      <text>工作日期</text>
+    </view>
+    <picker class="item-cell-ft blue" mode="date" value="{{date}}" start="2018-06-01" end="2050-01-01" bindchange="bindDateChangeDate">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+
+<view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>日薪</text>
+    </view>
+    <view class="item-cell-ft blue">
+      <input bindfocus="salaryfocus" bindblur="salaryblur" placeholder-style="color:#999;font-weight:bold;" type="number" value="{{salary}}" placeholder="{{salary_text}}" />
+    </view>
+  </view>
+
+  <view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>所需人数</text>
+    </view>
+    <view class="item-cell-ft blue">
+      <input bindfocus="numfocus" bindblur="numblur" placeholder-style="color:#999;font-weight:bold;" type="number" value="{{num}}" placeholder="{{num_text}}" />
+    </view>
+  </view>
+  
+  <view class="item-cell item-cell-input">
+    <view class="item-cell-bd">
+      <text>联系电话</text>
+    </view>
+    <view class="item-cell-ft blue">
+       <input type="number" bindfocus="phonefocus" bindblur="phoneblur" maxlength="11" value="{{hr_tel}}" placeholder="{{hr_phone}}" /> 
+    </view>
+  </view>
+</view>
+
+<view class="item-cells">
+  <view class="item-cell"> 
+    <view class="item-cell-bd">
+      <text>工作详情</text>
+    </view>
+    <view class="item-cell-ft">
+      <text class="blue">{{detailLen}}</text>/100
+    </view>
+  </view>
+  <view class="item-cell-textarea">
+    <textarea bindinput="countdetailFun" class="item-textarea" value="{{detail}}" placeholder="填好工作详情，会有更多人关注哟!" maxlength="100" />
+  </view>
+</view>
+
+ <view class="fix-btn">
+    <view class="chooseLocation" bindtap='chooseLocation'>选择位置</view>
+  </view>
+
+<view class="btn-box" >
+    <button class="btn-sure" size="default" hover-class="btn-sure-hover" catchtap="submitJobBaseTap"> 发布 </button>
+    <button class="btn-sure m-b" size="default" hover-class="btn-sure-hover" catchtap="resetJobBaseTap"> 重置</button> 
+  <button class="btn-sure" size="primary" hover-class="btn-sure-hover" catchtap="back"> 返回</button>
+</view>

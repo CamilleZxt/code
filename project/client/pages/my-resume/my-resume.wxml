@@ -1,0 +1,53 @@
+ <!--pages/my-resume/my-resume.wxml-->
+
+<!--简历信息  -->
+  
+<view class="panel">
+
+  <view class="panel-hd">
+    <text style="font-size:28px;">个人简历</text>
+     <view class="edit-btn blue" catchtap="editBaseInfoTap">
+      <image style="text-align:center;" class="icon-edit" src="/images/edit_pen.png"></image>
+      <text class="blue">修改</text>
+    </view> 
+  </view>
+
+  <view class="panel-bd">  
+    <view class="base">
+      <text class="text">姓名:</text>
+      <text class="data-text">{{userName}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">性别:</text>
+      <text class="data-text">{{genderlist[genderindex]}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">出生年月:</text>
+      <text class="data-text">{{birthday}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">最高学历:</text>
+      <text class="data-text">{{edulevellist[edulevelindex]}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">联系手机:</text>
+      <text class="data-text">{{contact}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">联系邮箱:</text>
+      <text class="data-text">{{email}}</text>
+    </view>
+
+    <view class="base">
+      <text class="text">自我介绍:</text>
+      <text class="data-text">{{myself}}</text>
+    </view>
+  </view>
+</view>
+  
+

@@ -1,0 +1,34 @@
+<!-- <import src="../tpl/position-item/position-item.wxml"/> -->
+<include src="../tpl/search/search.wxml"/>
+
+<!--firstPage.wxml-->   
+  <view  wx:if='{{jobLen}}' class="container">
+    <block wx:for-items="{{jobData}}" wx:key=''>
+      <view class='card  b-shadow' bindtap='toggleBtn' data-id="{{item.job_id}}">
+        <view class='nearCard-fl'>
+          <image src='/images/Part-time.jpg' class='boder_image'></image>
+        </view>
+        <view class='nearCard-fr'> 
+        <view> 
+            <text class='c-green'>{{item.name}}</text>
+          </view>
+          <view>日期： 
+            <text class='c-green'>{{item.date}}</text>
+          </view>
+          <view>类型：
+            <text class='c-green'>{{item.type}}</text>
+          </view>
+          <view>日薪：
+            <text class='c-green'>{{item.salary}}/天</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view> 
+  <view wx:else class="container_null">
+    <view class="mes-null">
+        <image class="icon-null" src="/images/mes-null.png"></image>
+        <view class="hint">暂无符合条件的兼职</view> 
+    </view>
+  </view>
+ 

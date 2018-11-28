@@ -1,0 +1,85 @@
+<!--pages/myAddJob/myAddJob.wxml-->
+<!-- <import src="../tpl/position-item/position-item.wxml" /> -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待审核</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已审核</view>
+</view>  
+
+<view class='container'>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChangeTab" style="height:{{height}}px">
+    <!-- 待审核 -->
+    <swiper-item>
+        <view wx:if="{{jobCreateLen}}">
+          <block wx:for-items="{{jobCreate}}" wx:key=''>
+            <view class='card  b-shadow' data-id="{{item.job_id}}">
+              <view class='nearCard-fl'>
+                <image src='/images/Part-time.jpg' class='boder_image'></image>
+              </view>
+              <view class='nearCard-fr'>
+                <view>
+                  <text class='c-green'>{{item.name}}</text>
+                </view>
+                <view>日期：
+                  <text class='c-green'>{{item.date}}</text>
+                </view>
+                <view>类型：
+                  <text class='c-green'>{{item.type}}</text>
+                </view>
+                <view>日薪：
+                  <text class='c-green'>{{item.salary}}/天</text>
+                </view> 
+              </view>
+              <view class='down clearfix delete' bindtap="toggleBtn" data-id="{{item.job_id}}">
+                <text class='delete_style'>删除待审核信息</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      <view wx:else>
+        <view class="mes-null">
+          <image class="icon-null" src="/images/mes-null.png"></image>
+          <view class="hint">暂无待审核记录</view> 
+        </view>
+      </view>
+    </swiper-item>
+    
+    <!-- 已审核-->
+    <swiper-item>
+      <view wx:if="{{jobPassLen}}">
+          <block wx:for-items="{{jobPass}}" wx:key=''>
+            <view class='card  b-shadow' data-id="{{item.job_id}}">
+              <view class='nearCard-fl'>
+                <image src='/images/Part-time.jpg' class='boder_image'></image>
+              </view>
+              <view class='nearCard-fr'>
+              <view>
+                <text class='c-green'>{{item.name}}</text>
+              </view>
+              <view>日期：
+                <text class='c-green'>{{item.date}}</text>
+              </view>
+              <view>类型：
+                <text class='c-green'>{{item.type}}</text>
+              </view>
+              <view>日薪：
+                <text class='c-green'>{{item.salary}}/天</text>
+              </view>
+            </view>
+            <view class='down clearfix delete' bindtap="toggleBtn" data-id="{{item.job_id}}">
+                  <text class='delete_style'>删除已审核信息</text>
+            </view>
+            <view class='down clearfix delete' bindtap="acceptUsers" data-id="{{item.job_id}}">
+                  <text class='delete_style'>处理录取信息</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view wx:else>
+        <view class="mes-null">
+          <image class="icon-null" src="/images/mes-null.png"></image>
+          <view class="hint">暂无已审核记录</view> 
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

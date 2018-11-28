@@ -1,0 +1,24 @@
+<!--pages/opinion/opinion.wxml-->
+ 
+<view class="container">
+  <!-- <view>
+    <view class="op-box">问题和意见</view>
+      <view class="item-cell-ft">
+        <text class="blue">{{opinionLen}}</text>/100 
+      </view>
+  </view> -->
+  <view class="item-cell"> 
+    <view class="item-cell-bd">
+      <text>问题和意见</text>
+    </view>
+    <view class="item-cell-ft">
+      <text class="blue">{{opinionLen}}</text>/100
+    </view>
+  </view>
+     
+    
+    <view class="op-text">
+        <textarea bindfocus="opTextFocus" bindblur="opTextBlur" bindinput="setCon" maxlength="-1"class="op-con" value="{{myOpinion}}" placeholder-style="color:bold;" placeholder="{{conTextPla}}" maxlength="100"/>
+    </view>
+    <button class="btn" catchtap="submit">提交</button>
+</view>

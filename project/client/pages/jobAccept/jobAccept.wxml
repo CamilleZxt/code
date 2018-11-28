@@ -1,0 +1,26 @@
+<!--jobAccept.wxml-->   
+<view class="container">
+  <view wx:if='{{applyDataLen}}' class='block'>
+    <block wx:for-items="{{applyData}}" wx:key=''>
+      <view class='card  b-shadow' data-id="{{item.openid}}">
+        <view> 
+            <text class='c-green'>申请人：{{item.name}}</text>
+        </view>
+        <view class="fix-btn">
+          <view class="deliver-resume" bindtap='hisResume'data-id="{{item.openid}}">查看申请人简历</view> 
+          <view class="deliver-resume" bindtap='acceptHe' data-id="{{item.openid}}">
+              <view wx:if="{{isAccept && item.openid == openid}}">已录取</view>  
+              <view wx:else>同意录取</view>
+          </view>
+        </view> 
+      </view>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="mes-null">
+      <image class="icon-null" src="/images/mes-null.png"></image>
+      <view class="hint">好尴尬,还没人申请</view> 
+    </view>
+  </view>
+</view>
+ 
