@@ -1,0 +1,33 @@
+/*编辑部分的底部按钮*/
+.btn-box{
+  width: 100%;
+  padding: 0 28rpx;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.btn-sure {
+  color: #fff;
+  background-color: #84C7FF; 
+
+}
+/* .m-b {
+  margin-bottom: 20rpx;
+} */
+
+.btn-sure-hover{
+  background-color: #84C7FF;
+}
+.btn-remove{
+  color: #84C7FF;
+  background-color: #fafafa;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+/* .btn_style{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} */
